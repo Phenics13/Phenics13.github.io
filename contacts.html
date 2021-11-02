@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    
+    <title>Sergei Dranchenko | Portfolio</title>
+</head>
+<body>
+
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header-logo">
+                        <img src="assets/images/logo.png" alt="logo">
+                    </div>
+            
+                    <div class="header-nav">
+                        <a href="index.html" class="link">Главная</a>
+                        <a href="gallery.html" class="link">Галерея</a>
+                        <a href="contacts.html" class="link">Контакты</a>
+                    </div>
+                </div>
+                <div class="cancel-button">
+                    <img src="assets/images/menu-burger/menu-cancel.png" alt="menu-cancel">
+                </div>
+            </div>
+        </header>
+        
+        <div class="menu-burger">
+            <img src="assets/images/menu-burger/menu-burger.png" alt="menu-burger">
+        </div>
+        
+        
+        <!-- Main -->
+        <main class="main">
+            
+            <div class="contacts">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <div class="contacts__text _anim _anim-block">
+                            <p class="contacts__item">
+                                Здесь вы можете оставить свои данные для подальшего 
+                                совместного сотрудничества. Мы вместе обсудим все 
+                                тонкости и нюансы дальнейшей фотосессии, пожелания 
+                                и условия.         
+                            </p>
+                
+                            <p class="contacts__item">
+                                Также вы можете связаться со мной через почту 
+                                или инстаграм, ссылки на которые размещены в 
+                                конце страницы. 
+                            </p>
+                
+                            <p class="contacts__item">
+                                Не стесняйтесь выражать свое мнение и задавать 
+                                интересующие вопросы. Относитесь к фотосессии 
+                                как к хорошо проведенному времени, которое 
+                                сделает вас чуточку, но счастливее :)
+                            </p>
+                        </div>
+                        <div class="form__wrap">
+                            <div class="form__title title _anim">
+                                <h1>Заказать фотосессию</h1>
+                            </div>
+                            <div class="form__inner">
+                                <img src="assets/images/camera.png" alt="camera" class="form__img _anim">
+                                <form name = "main" action="" class="photosession">
+                                    <div class="form__item">
+                                        <input type="text" name="username" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="form__item">
+                                        <input type="text" name="phoneNumber" placeholder="Номер телефона">
+                                    </div>
+                                    <div class="form__item">
+                                        <input type="text" name="email" placeholder="Почта">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="">Жанр фотосъемки</label>
+                                        <select name="photoType" id="">
+                                            <option value="1" selected>Портретная</option>
+                                            <option value="2">Рекламная</option>
+                                            <option value="3">Семейная</option>
+                                            <option value="4">Свадебная</option>
+                                            <option value="5">Предмнетная / Фуд</option>
+                                            <option value="6">Архитектурная</option>
+                                            <option value="7">Пейзажная</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__item">
+                                        <input type="submit" name="" value="Отправить">
+                                    </div>            
+                                </form>
+                            </div>
+                        </div>        </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__item">
+                        <img src="assets/images/location.png" alt="location" class="footer__img">
+                        <a href="https://goo.su/8hd4" target="_blank">Kharkiv</a>
+                    </div>
+                    <div class="footer__item">
+                        <img src="assets/images/gmail.png" alt="email" class="footer__img">
+                        <a href="mailto:serhii.dranchenko@nure.ua?subject=Заказ%20фотосесии">serhii.dranchenko@nure.ua</a>
+                    </div>
+                    <div class="footer__item">
+                        <img src="assets/images/instagram.png" alt="instagram" class="footer__img">
+                        <a href="https://www.instagram.com/sergeidranchenko/" target="_blank">@sergeidranchenko</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Window -->
+    <div class="modal" id="modal">
+        <div class="pop-up">
+            <div id="left-button">
+                <img src="assets/images/left-white.png" alt="left-button">
+            </div>
+            <div class="pop-up__item">
+                <img src="https://imgholder.ru/800x500/8493a8/adb9ca&text=IMAGE+HOLDER&font=kelson" alt="current-pic" id="current-pic">
+            </div>
+            <div id="right-button">
+                <img src="assets/images/right-white.png" alt="right-button">
+            </div>
+            <div id="cancel-button">
+                <img src="assets/images/cancel.png" alt="cancel-button">
+            </div>
+        </div>
+    </div>
+    
+    <div id="top-button">
+        <img src="assets/images/toTop.png" alt="return-to-start">
+    </div>
+    <!-- JS -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
