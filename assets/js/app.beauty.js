@@ -1,7 +1,7 @@
-! function() { //Animation on Scroll
+! function() {
     const e = document.querySelectorAll("._anim");
     if (e.length > 0) {
-        function t(t) {
+        function t() {
             for (let t = 0; t < e.length; t++) {
                 const o = e[t],
                     c = o.offsetHeight,
@@ -25,7 +25,7 @@
         }), 300)
     }
 }(),
-function() { //Button Scroll Animation
+function() {
     const e = document.getElementById("mainButton");
     null != e && e.addEventListener("click", (function(e) {
         document.getElementById("mainSection").scrollIntoView({
@@ -34,7 +34,7 @@ function() { //Button Scroll Animation
         })
     }))
 }(),
-function() { //Check Form
+function() {
     const e = document.forms.main;
 
     function t(e, t, n) {
@@ -48,10 +48,16 @@ function() { //Check Form
             }))
         }
     }(), e.addEventListener("submit", (function(n) {
-        t(e[0], /[0-9]/.test(e[0].value) || 0 == e[0].value.length, n), t(e[1], !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(e[1].value), n), t(e[2], !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(e[2].value), n)
+        t(e[0], /[0-9]/.test(e[0].value) || 0 == e[0].value.length, n), t(e[1], !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(e[1].value), n), t(e[2], !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(e[2].value), n);
+        const o = {};
+        for (let t of e) {
+            let e = t.name;
+            e && (o[e] = t.value)
+        }
+        console.log(o), n.preventDefault()
     })))
 }(),
-function() { //Menu Burger
+function() {
     const e = document.querySelector(".menu-burger"),
         t = document.querySelector(".cancel-button");
     null != e && e.addEventListener("click", (() => {
@@ -60,7 +66,13 @@ function() { //Menu Burger
         document.querySelector(".header").classList.remove("_active"), document.body.classList.remove("_lock")
     }))
 }(),
-function() { //Modal Gallery Slider
+function() {
+    const e = document.getElementsByTagName("img");
+    for (let t in e) e[t].oncontextmenu = function() {
+        return !1
+    }
+}(),
+function() {
     let e = 0;
     const t = document.querySelectorAll(".gallery__pic");
     let n = document.getElementById("current-pic");
@@ -73,13 +85,15 @@ function() { //Modal Gallery Slider
             }
         }
     const o = document.getElementById("cancel-button");
-    null != o && o.addEventListener("click", (() => {
+    null != o && (o.addEventListener("click", (() => {
         modal.classList.remove("_display")
-    }));
+    })), document.addEventListener("keydown", (e => {
+        "Escape" == e.code && o.click()
+    })));
     const c = document.getElementById("left-button");
-    null != c && c.addEventListener("click", (() => {
-        0 === e ? (e = t.length - 1, n.src = s(e)) : (e -= 1, n.src = s(e))
-    }));
+    null != c && (c.addEventListener("click", r), document.addEventListener("keydown", (e => {
+        "ArrowLeft" == e.code && r()
+    })));
     const l = document.getElementById("right-button");
 
     function i(e) {
@@ -87,14 +101,22 @@ function() { //Modal Gallery Slider
             if (e.src === t[n].src) return n
     }
 
-    function s(e) {
+    function d(e) {
         return t[e].src
     }
-    null != l && l.addEventListener("click", (() => {
-        e === t.length - 1 ? (e = 0, n.src = s(e)) : (e += 1, n.src = s(e))
-    }))
+
+    function s() {
+        e === t.length - 1 ? (e = 0, n.src = d(e)) : (e += 1, n.src = d(e))
+    }
+
+    function r() {
+        0 === e ? (e = t.length - 1, n.src = d(e)) : (e -= 1, n.src = d(e))
+    }
+    null != l && (l.addEventListener("click", s), document.addEventListener("keydown", (e => {
+        "ArrowRight" == e.code && s()
+    })))
 }(),
-function() { //Burron Scroll To Top
+function() {
     const e = document.getElementById("top-button");
     null != e && window.innerWidth > 425 && (e.addEventListener("click", (() => {
         document.body.scrollIntoView({
