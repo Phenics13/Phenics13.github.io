@@ -58,6 +58,12 @@ function() {
     })))
 }(),
 function() {
+    const e = document.getElementsByTagName("img");
+    for (let t in e) e[t].oncontextmenu = function() {
+        return !1
+    }
+}(),
+function() {
     const e = document.querySelector(".menu-burger"),
         t = document.querySelector(".cancel-button");
     null != e && e.addEventListener("click", (() => {
@@ -65,12 +71,6 @@ function() {
     })), null != t && t.addEventListener("click", (() => {
         document.querySelector(".header").classList.remove("_active"), document.body.classList.remove("_lock")
     }))
-}(),
-function() {
-    const e = document.getElementsByTagName("img");
-    for (let t in e) e[t].oncontextmenu = function() {
-        return !1
-    }
 }(),
 function() {
     let e = 0;
