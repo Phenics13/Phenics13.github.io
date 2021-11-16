@@ -436,6 +436,25 @@ a {
     color: inherit;
 }
 
+noscript {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
 @media (max-width: 620px) {
     body {
         font-size: 18px;

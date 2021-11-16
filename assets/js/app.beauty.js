@@ -54,7 +54,6 @@ function() {
             let e = t.name;
             e && (o[e] = t.value)
         }
-        console.log(o), n.preventDefault()
     })))
 }(),
 function() {
