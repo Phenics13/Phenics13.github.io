@@ -22,8 +22,14 @@
         }
         window.addEventListener("scroll", t), setTimeout((() => {
             t()
-        }), 300)
+        }), 600)
     }
+}(),
+function() {
+    const e = document.querySelector("main");
+    setTimeout((function() {
+        null != e && e.classList.add("_show")
+    }), 200)
 }(),
 function() {
     const e = document.getElementById("mainButton");

@@ -391,6 +391,12 @@ html {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     overflow-x: hidden;
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+}
+
+.main._show {
+    opacity: 1;
 }
 
 .container {
@@ -421,14 +427,16 @@ button {
     color: #fff;
     background-color: transparent;
     cursor: pointer;
-    transition: border 0.1s linear, background-color 0.3s ease, padding 0.2s linear, width 1s;
+    transition: border 0.1s linear, background-color 0.3s ease, width 1s, -webkit-transform 0.2s linear;
+    transition: border 0.1s linear, background-color 0.3s ease, transform 0.2s linear, width 1s;
+    transition: border 0.1s linear, background-color 0.3s ease, transform 0.2s linear, width 1s, -webkit-transform 0.2s linear;
 }
 
 button:hover {
-    border: 5px solid #FFD52C;
     background-color: #FFD52C;
-    padding: 40px;
-    width: 540px;
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+    width: 90%;
 }
 
 a {
@@ -1233,6 +1241,9 @@ noscript {
 
 #current-pic {
     height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
     text-align: center;
 }
 
