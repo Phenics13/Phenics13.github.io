@@ -483,6 +483,18 @@ noscript {
         font-size: 16px;
     }
 }
+
+@media print {
+    * {
+        opacity: 1 !important;
+        -webkit-transform: translate(0, 0) !important;
+        transform: translate(0, 0) !important;
+    }
+
+    noscript {
+        display: none;
+    }
+}
 /* header */
 .header {
     position: fixed;
@@ -542,7 +554,7 @@ noscript {
     display: none;
 }
 
-@media (max-width: 620px) {
+@media screen and (max-width: 620px) {
     .header {
         width: 100%;
         height: 100%;
@@ -583,6 +595,12 @@ noscript {
         top: 10px;
         right: 10px;
         z-index: 3;
+    }
+}
+
+@media print {
+    .header {
+        position: absolute;
     }
 }
 /* intro */
@@ -1240,6 +1258,9 @@ noscript {
 }
 
 #current-pic {
+    position: relative;
+    top: 0;
+    left: 7px;
     height: 100%;
     width: 100%;
     -o-object-fit: contain;
