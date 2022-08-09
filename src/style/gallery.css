@@ -1,0 +1,77 @@
+/* Content */
+/* Gallery */
+.gallery--back {
+    position: absolute;
+    top: 2rem;
+    font-size: 3rem;
+    /* animation: exit 1s ease-in-out infinite; */
+    transition: all 0.5s ease;
+}
+
+.gallery--back:hover {
+    transform: translateX(-0.5rem);
+}
+
+.gallery--btn {
+    overflow: hidden;
+    position: relative;
+    border: none !important;
+    width: 16.5rem;
+    height: 18rem;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 0 !important;
+    transition: 1s ease;
+}
+
+.gallery--btn:hover {
+    box-shadow:
+        0px 1.9px 2.5px rgba(0, 0, 0, 0.031),
+        0px 4.6px 6px rgba(0, 0, 0, 0.044),
+        0px 8.6px 11.3px rgba(0, 0, 0, 0.055),
+        0px 15.4px 20.1px rgba(0, 0, 0, 0.066),
+        0px 28.8px 37.6px rgba(0, 0, 0, 0.079),
+        0px 69px 90px rgba(0, 0, 0, 0.11);
+
+    transform: translate(0, -10%);
+}
+
+.gallery--btn:hover>span {
+    top: 70%
+}
+
+.gallery--btn>span {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;
+}
+
+.gallery--btn>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery--ways {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+@keyframes exit {
+    0% {
+        transform: translateX(0rem);
+    }
+
+    50% {
+        transform: translateX(-0.5rem);
+    }
+
+    100% {
+        transform: translateX(0rem);
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="./neostyle.css">
+    <!-- <link rel="icon" type="image/png" href="./src/img/icon-hourglass.png" sizes="96x96"> -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌛️</text></svg>">
+    <!-- Google font 'Lato' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="question">
+        <span>🧐</span>
+    </div>
+    <div class="menu-burger --toggle">
+        <div class="menu-burger--inner">
+            <span></span>
+        </div>
+    </div>
+    <div class="menu">
+        <nav class="menu--nav">
+            <div class="menu--item">
+                <span>Dark theme</span>
+                <input type="checkbox" name="theme" id="theme" />
+                <label for="theme">Dark theme</label>
+            </div>
+            <div class="menu--item">
+                <span>12 / 24</span>
+                <input type="checkbox" name="time" id="time" checked="1" />
+                <label for="time">12/24</label>
+            </div>
+            <div class="menu--item">
+                <button class="menu--btn">
+                    <span class="wave1"></span>
+                    <span class="wave2"></span>
+                    <span class="wave3"></span>
+                    author
+                </button>
+            </div>
+        </nav>
+        <div class="menu--exit">
+            &#9635;
+        </div>
+    </div>
+    <div class="author">
+        <p>Some information about me!!! Lorem ipsum dolor sit amet consectetur.</p>
+        <hr>
+        <p> adipisicing elit. Ducimus ratione est
+            debitis dolorem quisquam doloremque reiciendis aliquam assumenda eius distinctio, minima dolore impedit
+            fugiat modi eos exercitationem corrupti, quis laborum?</p>
+        <div class="author--exit">
+            &#9635;
+        </div>
+    </div>
+    <div class="container">
+        <span class="hint">Click on <b>"Clock"</b>-header to change its' animation</span>
+        <header class="header">
+            <h1 class="header--clock">Clock</h1>
+            <p class="header--emoji">⌛️</p>
+        </header>
+        <main>
+
+            <div id="currentTime">
+                <p>Ooops! No time information is found</p>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <p>Clock pet-project &#8212; <b>Soul</b> <sup>&reg;</sup></p>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

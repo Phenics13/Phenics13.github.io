@@ -1,0 +1,30 @@
+/* Footer */
+.footer {
+    color: white;
+    font-size: 1.25rem;
+    background: #000;
+}
+
+.footer--wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.footer--social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social--item {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.social--item>img {
+    margin-right: 0.5rem;
+}

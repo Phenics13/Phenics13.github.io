@@ -1,0 +1,47 @@
+/* Header */
+.header {
+    z-index: 1;
+    position: fixed;
+    width: 80%;
+    left: 10%;
+    border-radius: 0 0 2rem 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(0.75rem);
+}
+
+.header--wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.25rem 0 0.5rem 0;
+}
+
+.header--logo>p {
+    padding: 0.25rem 0;
+    font-size: 2.5rem;
+}
+
+.header--nav {
+    color: white;
+}
+
+.nav--list {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav--item {
+    position: relative;
+    margin: 0 1.5rem;
+
+    transition: all 0.3s linear;
+}
+
+.nav--item:hover {
+    color: #FFD52C;
+}
+
+.nav--item:hover>.current {
+    width: 100%;
+}

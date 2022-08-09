@@ -1,0 +1,439 @@
+/* Erasing some default browser settings */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Writing styles */
+/* Body */
+body {
+    /* disable selection on tap */
+    -webkit-tap-highlight-color: transparent;
+
+    color: black;
+    background-color: white;
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 2s ease-in-out;
+}
+
+body.--dark {
+    color: white;
+    background-color: #333333;
+}
+
+/* Container */
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.header {
+    position: relative;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.header--clock {
+    user-select: none;
+
+    text-shadow:
+        3px 4.7px 8.6px rgba(0, 0, 0, 0.066),
+        7.8px 12.3px 29px rgba(0, 0, 0, 0.094),
+        28px 44px 130px rgba(0, 0, 0, 0.11);
+    animation: flow 8s ease-in-out infinite;
+    background-image: url(./img/bg2.jpg);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+/* Animating header background */
+@keyframes flow {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.header--emoji {
+    user-select: none;
+    position: absolute;
+    right: -1.75rem;
+    font-size: 2rem;
+    margin-top: 3rem;
+    cursor: default;
+}
+
+/* Hint-text*/
+.hint {
+    position: absolute;
+    left: 10%;
+    top: 22%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    max-width: 65vw;
+    transform: none;
+}
+
+/* Hint-text animation */
+.hint.--toggle {
+    opacity: 1;
+}
+
+/* Question-emoji*/
+.question {
+    user-select: none;
+    z-index: 1;
+    position: absolute;
+    top: 0.75rem;
+    left: 22%;
+    cursor: pointer;
+}
+
+.question>span {
+    font-size: 2rem;
+}
+
+/* Menu-Burger */
+.menu-burger {
+    user-select: none;
+    z-index: 1;
+    position: absolute;
+    top: -2rem;
+    right: 20%;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.90, -0.70, 0.32, 1.45);
+}
+
+/* Menu-Burger animation */
+.menu-burger.--toggle {
+    top: 1rem;
+}
+
+.menu-burger--inner {
+    position: relative;
+    width: 2.25rem;
+    height: 1.75rem;
+}
+
+.menu-burger--inner>span,
+.menu-burger--inner::before,
+.menu-burger--inner::after {
+    position: absolute;
+    width: 100%;
+    height: 0.24rem;
+    background: linear-gradient(50deg, rgb(120, 63, 63), rgb(246, 240, 117));
+    background-size: 200%;
+    animation: flow 4s ease-in-out infinite;
+}
+
+.menu-burger--inner>span {
+    top: calc(50% - 0.12rem);
+}
+
+.menu-burger--inner::before,
+.menu-burger--inner::after {
+    content: ' ';
+}
+
+.menu-burger--inner::before {
+    top: 0;
+}
+
+.menu-burger--inner::after {
+    bottom: 0;
+}
+
+/* Menu */
+.menu {
+    z-index: 1;
+    position: absolute;
+    top: -20rem;
+    width: 80vw;
+    max-width: 45rem;
+    /* height: 7rem; */
+    padding: 0 3.25rem;
+    background-color: transparent;
+    backdrop-filter: blur(0.75rem);
+    box-shadow:
+        3px 4.7px 8.6px rgba(0, 0, 0, 0.066),
+        5px 12.3px 29px rgba(0, 0, 0, 0.094),
+        19px 44px 130px rgba(0, 0, 0, 0.11);
+    -webkit-border-bottom-right-radius: 1.5rem;
+    -webkit-border-bottom-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    padding-top: 4rem;
+
+    transition: top 0.6s cubic-bezier(0.62, -0.43, 0.32, 1.45) 0s;
+}
+
+/* Menu animation */
+.menu.--toggle {
+    top: -4rem;
+    transition: top 0.6s cubic-bezier(0.62, -0.43, 0.32, 1.45) 0.2s;
+}
+
+.menu--nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu--item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+
+.menu--exit {
+    user-select: none;
+    position: inherit;
+    top: 4.75rem;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    transition: color 0.6s ease-in-out, transform 0.4s cubic-bezier(0.23, 1.5, 0.8, 0.99);
+}
+
+.menu--exit:hover {
+    color: #bada55;
+    transform: rotate(45deg);
+}
+
+/* Toggle-checkbox */
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    height: 1.5rem;
+    width: 3rem;
+    background: grey;
+    display: block;
+    border-radius: 1rem;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    height: 1rem;
+    width: 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+input:checked+label {
+    background: #bada55;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 1.2rem;
+}
+
+/* Button */
+button {
+    user-select: none;
+
+    padding: 0;
+    text-decoration: none;
+    overflow: visible;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu-Button */
+.menu--btn {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    background: transparent;
+    outline: 0.19rem solid #808080;
+    border-radius: 1rem;
+    width: 5rem;
+    height: 2.75rem;
+    padding-bottom: 0.12rem;
+
+    margin-top: 0.1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.menu--btn>span {
+    position: absolute;
+    content: '';
+    top: 3rem;
+    right: 0;
+    width: 5rem;
+    height: 6rem;
+    border-radius: 42.5%;
+    transition: all 1s ease;
+}
+
+.wave1 {
+    background: #F99734;
+    animation: smallwave 3s infinite linear;
+}
+
+.wave2 {
+    background: #F75674;
+    animation: smallwave 4s infinite linear;
+}
+
+.wave3 {
+    background: #239ED3, 20%;
+    animation: smallwave 5s infinite linear;
+}
+
+.menu--btn:hover {
+    outline: 0.19rem solid #bada55;
+}
+
+.menu--btn:hover>span {
+    top: 1rem;
+}
+
+/* Menu-Button span animation */
+@keyframes smallwave {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+/* Author */
+.author {
+    z-index: 1;
+    position: absolute;
+    top: -30rem;
+    width: 80vw;
+    max-width: 45rem;
+    padding: 4rem 3.25rem 0 3.25rem;
+    background-color: transparent;
+    backdrop-filter: blur(0.75rem);
+    box-shadow:
+        3px 4.7px 8.6px rgba(0, 0, 0, 0.066),
+        5px 12.3px 29px rgba(0, 0, 0, 0.094),
+        19px 44px 130px rgba(0, 0, 0, 0.11);
+    -webkit-border-bottom-right-radius: 1.5rem;
+    -webkit-border-bottom-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+
+    transition: 0.6s cubic-bezier(0.66, -0.51, 0.26, 1.83) 0s;
+}
+
+.author>p:first-child {
+    margin-top: 2.5rem;
+}
+
+/* Author animation */
+.author.--toggle {
+    top: -4rem;
+    transition: 0.6s cubic-bezier(0.31, -0.11, 0.15, 1.52) 0.4s;
+}
+
+.author--exit {
+    user-select: none;
+
+    position: inherit;
+    top: 4.75rem;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    transition: color 0.6s ease-in-out, transform 0.4s cubic-bezier(0.23, 1.5, 0.8, 0.99);
+}
+
+.author--exit:hover {
+    color: #bada55;
+    transform: rotate(45deg);
+}
+
+/* Horizontal line */
+hr {
+    border: none;
+    height: 0.12rem;
+    background-color: black;
+    border-radius: 0.5rem;
+}
+
+hr.--dark {
+    background-color: white;
+}
+
+/* Content */
+#currentTime {
+    user-select: none;
+
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 7rem;
+}
+
+/* Media queries */
+@media (max-width: 480px) {
+    .question {
+        left: 10%;
+    }
+
+    .menu-burger {
+        right: 5%;
+    }
+}

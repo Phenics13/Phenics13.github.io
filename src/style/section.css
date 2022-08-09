@@ -1,0 +1,28 @@
+/* Section */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.section--title {
+    margin-bottom: 2rem;
+}
+
+.section--information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section--text {
+    position: relative;
+    top: -2rem;
+}
+
+.section--img {
+    position: relative;
+    top: -7rem;
+    left: 3rem;
+}
