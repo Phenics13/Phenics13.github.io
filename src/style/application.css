@@ -4,6 +4,26 @@
     background-color: #333333;
 }
 
+.application--content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.application--back {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    font-size: 3rem;
+    transition: all 0.5s ease;
+}
+
+.application--back:hover {
+    transform: translateX(-0.5rem);
+}
+
 .application--title {
     margin-bottom: 2rem;
     text-align: center;
@@ -58,4 +78,25 @@
 
 .form--item:last-child:hover {
     border: 0.25rem solid #FFD52C;
+}
+
+/* Affirmation */
+.application--affirmation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 28rem;
+    margin: 1rem 2rem 1rem 0;
+    position: relative;
+    background: white;
+    border: 1rem solid white;
+    box-shadow: inset 2px 2px 20px rgb(0 0 0 / 55%), 2px 2px 40px 5px #000;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 2rem 1.5rem;
+}
+
+.application--affirmation>p {
+    margin: 1rem 0;
 }

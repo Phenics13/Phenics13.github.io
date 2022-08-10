@@ -20,6 +20,7 @@
 .header--logo>p {
     padding: 0.25rem 0;
     font-size: 2.5rem;
+    cursor: default;
 }
 
 .header--nav {

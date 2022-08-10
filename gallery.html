@@ -23,7 +23,7 @@
             <section class="gallery section">
                 <div class="container">
                     <div class="gallery--content content">
-                        <a href="./index.html" class="gallery--back">&#8592;</a>
+                        <a href="#" class="gallery--back">&#8592;</a>
                         <div class="gallery--title title">
                             <h1>Добро пожаловать в галерею</h1>
                         </div>
@@ -59,9 +59,30 @@
             </section>
         </main>
         <footer class="footer">
-
+            <div class="container">
+                <div class="footer--wrap">
+                    <div class="footer--location">
+                        <span>🇺🇦 Ukraine, Kharkiv</span>
+                    </div>
+                    <div class="footer--social">
+                        <a href="mailto:serhii.dranchenko@nure.ua?subject=Заказ%20фотосесии" class="social--item">
+                            <img src="./src/img/components/footer/gmail1.png" alt="gmail">
+                            <span>serhii.dranchenko@nure.ua</span>
+                        </a>
+                        <a href="https://www.instagram.com/sergeidranchenko/" class="social--item">
+                            <img src="./src/img/components/footer/instagram1.png" alt="instagram">
+                            <span>@sergeidranchenko</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
+<script>
+    let back = document.querySelector('.gallery--back');
+    const backFun = () => { window.history.back(); }
+    back.addEventListener('click', backFun);
+</script>
 
 </html>

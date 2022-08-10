@@ -1,5 +1,9 @@
 /* Content */
 /* Gallery */
+.gallery--content {
+    position: relative;
+}
+
 .gallery--back {
     position: absolute;
     top: 2rem;

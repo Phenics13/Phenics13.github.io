@@ -12,17 +12,19 @@
 .section--information {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .section--text {
     position: relative;
     top: -2rem;
+    max-width: 37.5rem;
 }
 
 .section--img {
     position: relative;
     top: -7rem;
     left: 3rem;
+    max-width: 60vh;
 }
