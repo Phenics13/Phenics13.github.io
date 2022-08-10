@@ -23,7 +23,7 @@
             <section class="gallery section">
                 <div class="container">
                     <div class="gallery--content content">
-                        <a href="#" class="gallery--back">&#8592;</a>
+                        <a href="javascript:history.back();" class="gallery--back">&#8592;</a>
                         <div class="gallery--title title">
                             <h1>Добро пожаловать в галерею</h1>
                         </div>
@@ -79,10 +79,5 @@
         </footer>
     </div>
 </body>
-<script>
-    let back = document.querySelector('.gallery--back');
-    const backFun = () => { window.history.back(); }
-    back.addEventListener('click', backFun);
-</script>
 
 </html>

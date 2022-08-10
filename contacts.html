@@ -23,7 +23,7 @@
             <section class="application section">
                 <div class="container">
                     <div class="application--content content">
-                        <a href="#" class="application--back">&#8592;</a>
+                        <a href="javascript:history.back();" class="application--back">&#8592;</a>
                         <div class="application--affirmation">
                             <p>
                                 Здесь вы можете оставить свои данные для подальшего совместного сотрудничества. Мы
@@ -92,10 +92,5 @@
         </footer>
     </div>
 </body>
-<script>
-    let back = document.querySelector('.application--back');
-    const backFun = () => { window.history.back(); }
-    back.addEventListener('click', backFun);
-</script>
 
 </html>
