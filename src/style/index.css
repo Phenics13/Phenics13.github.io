@@ -24,7 +24,8 @@
 .preview--wrap {
     z-index: 0;
     position: relative;
-    width: 32rem;
+    width: 50%;
+    min-width: 32rem;
 }
 
 .preview--background {
