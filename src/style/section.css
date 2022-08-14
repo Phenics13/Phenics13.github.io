@@ -23,4 +23,5 @@
     top: -7rem;
     left: 3rem;
     max-width: 60vh;
+    min-width: 30vw;
 }

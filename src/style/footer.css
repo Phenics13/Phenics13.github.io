@@ -13,7 +13,7 @@
     padding: 1rem 0;
 }
 
-.footer--social {
+/* .footer--social {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,9 +23,18 @@
     display: flex;
     align-items: center;
     margin-left: 1rem;
+} */
+
+.footer--item:first-child {
+    flex: 1;
+    margin-left: 0;
 }
 
-.social--item>img {
-    width: 2rem;
-    margin-right: 0.5rem;
+.footer--item {
+    margin-left: 1rem;
+}
+
+.footer--item>a>img {
+    width: 1.5rem;
+    margin-right: 0.15rem;
 }
