@@ -5,10 +5,6 @@
     align-items: center;
 }
 
-.section--title {
-    margin-bottom: 2rem;
-}
-
 .section--information {
     display: flex;
     flex-direction: row;
@@ -19,8 +15,6 @@
 .section--text {
     position: relative;
     top: -2rem;
-    width: 60%;
-    /* max-width: 37.5rem;actual */
     margin-right: 2rem;
 }
 
