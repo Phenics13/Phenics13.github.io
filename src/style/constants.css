@@ -16,6 +16,12 @@
     padding: 4rem 0 2rem 0;
 }
 
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
 .title {
     font-size: 4rem;
     font-weight: 700;

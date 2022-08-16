@@ -1,10 +1,4 @@
 /* Section */
-.section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
 .section--information {
     display: flex;
     flex-direction: row;
