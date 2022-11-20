@@ -49,6 +49,7 @@ a {
     object-fit: contain;
 }
 
+/* current link underline */
 .current {
     position: relative;
     height: 0.25rem;
@@ -59,4 +60,50 @@ a {
     background: #FFD52C;
 
     transition: all 0.3s cubic-bezier(0.72, -0.26, 0.3, 1.25);
+}
+
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+
+    width: 80%;
+    margin: 0 auto;
+    min-height: 10rem;
+    max-height: 15rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+
+    border-radius: 2rem;
+    background-color: rgb(199, 199, 199, 0.3);
+    margin-top: 3rem;
+    text-align: center;
+    line-height: normal;
+    z-index: 1;
+}
+
+.coming-soon::after {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -2.5rem;
+    left: -2.5rem;
+    border-radius: 2rem;
+    border: 0.5rem solid #3d3d3d;
+    background-color: rgb(199, 199, 199);
+    z-index: -1;
+}
+
+.coming-soon--content {
+    position: relative;
+    top: -2rem;
+    left: -2rem;
+}
+
+.coming-soon--img {
+    font-size: 5rem;
 }

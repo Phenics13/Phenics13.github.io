@@ -6,20 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sergei Dranchenko | Portfolio</title>
-    <link rel="stylesheet" href="./src/style/style.css">
+
     <link rel="stylesheet" href="./src/style/reset.css">
+    <link rel="stylesheet" href="./src/style/constants.css">
+    <link rel="stylesheet" href="./src/style/header.css">
+    <link rel="stylesheet" href="./src/style/footer.css">
 </head>
 
 <body>
-    <header class="header">
-
-    </header>
-    <main class="main">
-        <div class="container"></div>
-    </main>
-    <footer class="footer">
-
-    </footer>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header--wrap">
+                    <div class="header--logo">
+                        <p>🦊</p>
+                    </div>
+                    <nav class="header--nav">
+                        <ul class="nav--list">
+                            <li class="nav--item"><a href="./index.html">Главная</a></li>
+                            <li class="nav--item">
+                                <a href="./gallery.html">Галерея</a>
+                                <div class="current"></div>
+                            </li>
+                            <li class="nav--item"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="web-photo section">
+                <div class="container">
+                    <div class="web-photo--content content">
+                        <div class="web-photo--title title">Фотогалерея</div>
+                        <div class="web-photo--information">
+                            <div class="coming-soon">
+                                <div class="coming-soon--content">
+                                    <div class="coming-soon--img">🛠</div>
+                                    <div class="coming-soon--text"><b>В разработке...</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer--wrap">
+                    <div class="footer--item">
+                        <span>🇺🇦 Украина, Харьков</span>
+                    </div>
+                    <div class="footer--item">
+                        <a href="mailto:serhii.dranchenko@nure.ua?subject=Заказ%20фотосесии" class="social--item">
+                            <img src="./src/img/components/footer/gmail1.png" alt="gmail">
+                            <span>serhii.dranchenko@nure.ua</span>
+                        </a>
+                    </div>
+                    <div class="footer--item">
+                        <a href="https://www.instagram.com/sergeidranchenko/" class="social--item">
+                            <img src="./src/img/components/footer/instagram1.png" alt="instagram">
+                            <span>@sergeidranchenko</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
