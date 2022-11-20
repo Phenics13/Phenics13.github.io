@@ -79,3 +79,10 @@
         transform: translateX(0rem);
     }
 }
+
+@media screen and (max-width: 425px) {
+    .gallery--btn {
+        width: 20.5rem;
+        height: 22rem;
+    }
+}
