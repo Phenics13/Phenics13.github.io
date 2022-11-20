@@ -108,6 +108,7 @@ a {
     font-size: 5rem;
 }
 
+/* Font size media queries */
 @media screen and (min-width: 1920px) {
     html {
         font-size: 140%;
@@ -123,5 +124,28 @@ a {
 @media screen and (max-width: 768px) {
     html {
         font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* Style media queries */
+@media screen and (max-width: 425px) {
+    .content {
+        padding: 4rem 0 4rem 0;
+    }
+
+    .container {
+        width: 90%;
     }
 }

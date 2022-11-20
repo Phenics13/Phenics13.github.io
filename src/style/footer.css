@@ -38,3 +38,13 @@
     width: 1.5rem;
     margin-right: 0.15rem;
 }
+
+@media screen and (max-width: 425px) {
+    .footer--wrap {
+        flex-direction: column;
+    }
+
+    .footer--item {
+        margin: 0.25rem 0;
+    }
+}

@@ -19,3 +19,21 @@
     max-width: 60vh;
     min-width: 30vw;
 }
+
+@media screen and (max-width: 425px) {
+    .section--information {
+        flex-direction: column;
+    }
+
+    .section--text {
+        top: 0rem;
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .section--img {
+        top: 0rem;
+        left: 0rem;
+        max-width: 35vh;
+    }
+}

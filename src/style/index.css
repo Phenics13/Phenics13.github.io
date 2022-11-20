@@ -61,3 +61,43 @@
 .preview--btn:hover {
     width: 80%;
 }
+
+.preview--avatar {
+    display: none;
+}
+
+@media screen and (max-width: 425px) {
+    .preview {
+        text-align: center;
+        color: black;
+        background-image: none;
+    }
+
+    .preview--content {
+        flex-direction: column;
+    }
+
+    .preview--btn {
+        width: 90%;
+    }
+
+    .preview--btn:hover {
+        width: 90%
+    }
+
+    .preview--background {
+        display: none;
+    }
+
+    .preview--avatar {
+        display: block;
+        margin: 0 auto;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .preview--avatar>.img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

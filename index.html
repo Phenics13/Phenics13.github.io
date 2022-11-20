@@ -8,6 +8,8 @@
     <title>Sergei Dranchenko | Portfolio</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦊</text></svg>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link rel="stylesheet" href="./src/style/index.css">
     <link rel="stylesheet" href="./src/style/reset.css">
     <link rel="stylesheet" href="./src/style/constants.css">
@@ -20,9 +22,11 @@
 
 <body>
     <div class="page">
+        <i class="header--appear material-icons">menu</i>
         <header class="header">
             <div class="container">
                 <div class="header--wrap">
+                    <i class="header--disappear material-icons">close</i>
                     <div class="header--logo">
                         <p>🦊</p>
                     </div>
@@ -32,8 +36,12 @@
                                 <a href="./index.html">Главная</a>
                                 <div class="current"></div>
                             </li>
-                            <li class="nav--item"><a href="./gallery.html">Галерея</a></li>
-                            <li class="nav--item"><a href="./contacts.html">Контакты</a></li>
+                            <li class="nav--item">
+                                <a href="./gallery.html">Галерея</a>
+                            </li>
+                            <li class="nav--item">
+                                <a href="./contacts.html">Контакты</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -43,6 +51,9 @@
             <section class="preview">
                 <div class="container">
                     <div class="preview--content content">
+                        <div class="preview--avatar">
+                            <img class="img" src="./src/img/index/main.jpg" alt="avatar">
+                        </div>
                         <div class="preview--wrap">
                             <div class="preview--title title">
                                 <h1>Привет, меня зовут Сергей!</h1>
@@ -142,6 +153,7 @@
         </footer>
     </div>
 </body>
-<script src="./src/script/script.js"></script>
+<script src="./src/script/index.js"></script>
+<script src="./src/script/menuMobile.js"></script>
 
 </html>

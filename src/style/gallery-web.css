@@ -97,3 +97,18 @@
 .content--tools>i {
     font-size: inherit;
 }
+
+@media screen and (max-width: 425px) {
+    .web-projects--card {
+        flex-direction: column;
+    }
+
+    .card--img {
+        height: auto;
+    }
+
+    .card--img>img {
+        width: 100%;
+        left: 0;
+    }
+}

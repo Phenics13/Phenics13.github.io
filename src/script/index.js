@@ -14,3 +14,4 @@ previewButton.addEventListener('click', function () {
         block: 'start',
     });
 });
+console.log(`${window.innerWidth}X${window.innerHeight}`)
