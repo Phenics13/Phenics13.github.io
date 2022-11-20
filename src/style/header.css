@@ -87,6 +87,8 @@
         display: block;
         position: absolute;
         right: 1rem;
+
+        font-size: 3rem;
     }
 
     .header--appear {
