@@ -9,6 +9,15 @@
     backdrop-filter: blur(0.75rem);
     -moz-backdrop-filter: blur(0.75rem);
     -webkit-backdrop-filter: blur(0.75rem);
+
+    box-shadow:
+        0px 1.9px 2.5px rgba(0, 0, 0, 0.031),
+        0px 4.6px 6px rgba(0, 0, 0, 0.044),
+        0px 8.6px 11.3px rgba(0, 0, 0, 0.055),
+        0px 15.4px 20.1px rgba(0, 0, 0, 0.066),
+        0px 28.8px 37.6px rgba(0, 0, 0, 0.079),
+        0px 69px 90px rgba(0, 0, 0, 0.11);
+
 }
 
 .header--wrap {
@@ -76,6 +85,7 @@
 
     .header--wrap {
         flex-direction: column;
+        margin-bottom: 1rem;
     }
 
     .nav--list {
