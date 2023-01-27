@@ -7,6 +7,10 @@
     border: 0.5rem solid #6f1271;
 }
 
+#crwn {
+    border: 0.5rem solid #111111;
+}
+
 /* Card */
 .web-projects--card {
     width: 80%;
